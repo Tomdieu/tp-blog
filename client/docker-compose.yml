@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  client:
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    container_name: client
+    restart: always
+    networks:
+      - blog
+
+networks:
+  blog:

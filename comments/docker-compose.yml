@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  comments:
+    build:
+      context: .
+    ports:
+      - "4001:4001"
+    container_name: comments
+    restart: always
+    networks:
+      - blog
+
+networks:
+  blog:
+    

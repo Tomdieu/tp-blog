@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  posts:
+    build:
+      context: .
+    ports:
+      - "4003:4003"
+    container_name: posts
+    restart: always
+    networks:
+      - blog
+
+networks:
+  blog:

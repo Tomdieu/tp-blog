@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  query:
+    build:
+      context: .
+    ports:
+      - "4002:4002"
+    container_name: query
+    restart: always
+    networks:
+      - blog
+
+networks:
+  blog:

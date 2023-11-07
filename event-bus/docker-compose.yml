@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  event_bus:
+    build:
+      context: .
+    ports:
+      - "4005:4005"
+    container_name: event_bus
+    restart: always
+    networks:
+      - blog
+
+networks:
+  blog:
+    

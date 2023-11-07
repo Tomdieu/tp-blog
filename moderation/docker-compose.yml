@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  moderation:
+    build:
+      context: .
+    ports:
+      - "4003:4003"
+    container_name: moderation
+    restart: always
+    networks:
+      - blog
+
+networks:
+  blog:
+    
