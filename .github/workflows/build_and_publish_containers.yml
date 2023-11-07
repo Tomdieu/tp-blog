@@ -26,8 +26,8 @@ jobs:
 
       - name: Push Docker image to Github Container Registry
         run: |
-          docker tag tp-block/client:latest ghcr.io/tomdieu/tp-block/client:latest
-          docker push ghcr.io/tomdieu/tp-block/client:latest
+          docker tag tp-block/client:latest ghcr.io/tomdieu/tp-block/tp-block/client:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/client:latest
 
   build-comments-and-publish:
     runs-on: ubuntu-latest
@@ -50,8 +50,8 @@ jobs:
 
       - name: Push Docker image to Github Container Registry
         run: |
-          docker tag tp-block/comments:latest ghcr.io/tomdieu/tp-block/comments:latest
-          docker push ghcr.io/tomdieu/tp-block/comments:latest
+          docker tag tp-block/comments:latest ghcr.io/tomdieu/tp-block/tp-block/comments:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/comments:latest
 
   build-event-bus-and-publish:
     runs-on: ubuntu-latest
@@ -74,8 +74,8 @@ jobs:
 
       - name: Push Docker image to Github Container Registry
         run: |
-          docker tag tp-block/event-bus:latest ghcr.io/tomdieu/tp-block/event-bus:latest
-          docker push ghcr.io/tomdieu/tp-block/event-bus:latest
+          docker tag tp-block/event-bus:latest ghcr.io/tomdieu/tp-block/tp-block/event-bus:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/event-bus:latest
 
   build-moderation-and-publish:
     runs-on: ubuntu-latest
@@ -97,8 +97,8 @@ jobs:
 
       - name: Push Docker image to Github Container Registry
         run: |
-          docker tag tp-block/moderation:latest ghcr.io/tomdieu/tp-block/moderation:latest
-          docker push ghcr.io/tomdieu/tp-block/moderation:latest
+          docker tag tp-block/moderation:latest ghcr.io/tomdieu/tp-block/tp-block/moderation:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/moderation:latest
 
   build-posts-and-publish:
     runs-on: ubuntu-latest
@@ -120,8 +120,8 @@ jobs:
 
       - name: Push Docker image to Github Container Registry
         run: |
-          docker tag tp-block/posts:latest ghcr.io/tomdieu/tp-block/posts:latest
-          docker push ghcr.io/tomdieu/tp-block/posts:latest
+          docker tag tp-block/posts:latest ghcr.io/tomdieu/tp-block/tp-block/posts:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/posts:latest
 
   build-query-and-publish:
     runs-on: ubuntu-latest
@@ -143,5 +143,5 @@ jobs:
 
       - name: Push Docker image to Github Container Registry
         run: |
-          docker tag tp-block/query:latest ghcr.io/tomdieu/tp-block/query:latest
-          docker push ghcr.io/tomdieu/tp-block/query:latest
+          docker tag tp-block/query:latest ghcr.io/tomdieu/tp-block/tp-block/query:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/query:latest
