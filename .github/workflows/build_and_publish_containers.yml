@@ -1,0 +1,147 @@
+name: Build and publish apps
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-client-and-publish:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd client && docker build . --tag tp-block/client:latest
+          
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image to Github Container Registry
+        run: |
+          docker tag tp-block/client:latest ghcr.io/tomdieu/tp-block/tp-block/client:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/client:latest
+
+  build-comments-and-publish:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd comments && docker build . --tag tp-block/comments:latest
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image to Github Container Registry
+        run: |
+          docker tag tp-block/comments:latest ghcr.io/tomdieu/tp-block/tp-block/comments:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/comments:latest
+
+  build-event-bus-and-publish:
+    runs-on: ubuntu-latest
+
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd event-bus && docker build . --tag tp-block/event-bus:latest
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image to Github Container Registry
+        run: |
+          docker tag tp-block/event-bus:latest ghcr.io/tomdieu/tp-block/tp-block/event-bus:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/event-bus:latest
+
+  build-moderation-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd moderation && docker build . --tag tp-block/moderation:latest
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image to Github Container Registry
+        run: |
+          docker tag tp-block/moderation:latest ghcr.io/tomdieu/tp-block/tp-block/moderation:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/moderation:latest
+
+  build-posts-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd posts && docker build . --tag tp-block/posts:latest
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image to Github Container Registry
+        run: |
+          docker tag tp-block/posts:latest ghcr.io/tomdieu/tp-block/tp-block/posts:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/posts:latest
+
+  build-query-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: |
+          cd query && docker build . --tag tp-block/query:latest
+
+      - name: Login to Github Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{github.repository_owner}}
+          password: ${{secrets.GITHUB_TOKEN }}
+
+      - name: Push Docker image to Github Container Registry
+        run: |
+          docker tag tp-block/query:latest ghcr.io/tomdieu/tp-block/tp-block/query:latest
+          docker push ghcr.io/tomdieu/tp-block/tp-block/query:latest
