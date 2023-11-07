@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comments-deployment
+  labels:
+    app: comments
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: comments
+  template:
+    metadata:
+      name: comments
+      labels:
+        app: comments
+    spec:
+      containers:
+        - name: comments
+          image: tp-block/comments:latest
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+      

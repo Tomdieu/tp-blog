@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: query-deployment
+  labels:
+    app: query
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: query
+  template:
+    metadata:
+      name: query
+      labels:
+        app: query
+    spec:
+      containers:
+        - name: query
+          image: tp-block/query:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 4001
+      restartPolicy: Always
+      
