@@ -9,6 +9,5 @@ spec:
     - protocol: TCP
       port: 4001
       targetPort: 80
-      nodePort: 4001
-  type: LoadBalancer
+  type: NodePort
   
