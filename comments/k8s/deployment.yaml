@@ -11,7 +11,7 @@ spec:
       app: comments
   template:
     metadata:
-      name: comments
+      name: comments-pod
       labels:
         app: comments
     spec:

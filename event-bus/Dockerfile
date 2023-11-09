@@ -7,6 +7,8 @@ COPY package*.json .
 
 RUN npm install
 
+COPY . .
+
 EXPOSE 4005
 
 ENTRYPOINT ["npm", "start"]

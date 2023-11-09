@@ -8,6 +8,7 @@ services:
       - "4005:4005"
     container_name: event_bus
     restart: always
+    image: tp-block/event-bus:latest
     networks:
       - blog
 

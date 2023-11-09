@@ -11,13 +11,13 @@ spec:
       app: query
   template:
     metadata:
-      name: query
+      name: query-pod
       labels:
         app: query
     spec:
       containers:
         - name: query
-          image: tp-block/query:latest
+          image: tp-blog/query
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4001

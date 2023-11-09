@@ -1,25 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: post-deployment
+  name: client-deployment
   labels:
-    app: posts
+    app: client
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: posts
+      app: client
   template:
     metadata:
-      name: posts-pod
+      name: client-pod
       labels:
-        app: posts
+        app: client
     spec:
       containers:
-        - name: posts
-          image: tp-blog/posts:latest
+        - name: client
+          image: tp-blog/client:latest
           imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 4000
       restartPolicy: Always
-      

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: query-service
+  name: moderation-service
 spec:
   selector:
-    app: query
+    app: moderation
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 4001
-  type: ClusterIP
+      targetPort: 8080
+  type: NodePort
   

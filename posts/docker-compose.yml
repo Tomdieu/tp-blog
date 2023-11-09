@@ -8,6 +8,7 @@ services:
       - "4003:4003"
     container_name: posts
     restart: always
+    image: tp-blog/posts:latest
     networks:
       - blog
 
