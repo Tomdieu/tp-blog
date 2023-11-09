@@ -8,6 +8,7 @@ services:
       - "4001:4001"
     container_name: comments
     restart: always
+    image: tp-block/comments:latest
     networks:
       - blog
 

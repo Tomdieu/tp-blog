@@ -8,6 +8,7 @@ services:
       - "4003:4003"
     container_name: moderation
     restart: always
+    image: tp-blog/moderation:latest
     networks:
       - blog
 
