@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM node:alpine
 LABEL authors="ivantom"
 
 WORKDIR /app
@@ -10,4 +10,3 @@ RUN npm install
 EXPOSE 4001
 
 ENTRYPOINT ["npm", "start"]
-
