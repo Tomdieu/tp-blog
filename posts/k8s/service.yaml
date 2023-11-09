@@ -4,10 +4,10 @@ metadata:
   name: post-service
 spec:
   selector:
-    app: post
+    app: posts
   ports:
     - protocol: TCP
       port: 80
       targetPort: 4000
-  type: LoadBalancer
+  type: ClusterIP
   
