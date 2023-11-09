@@ -1,25 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: post-deployment
+  name: moderation-deployment
   labels:
-    app: posts
+    app: moderation
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: posts
+      app: moderation
   template:
     metadata:
-      name: posts-pod
+      name: moderation-pod
       labels:
-        app: posts
+        app: moderation
     spec:
       containers:
-        - name: posts
-          image: tp-blog/posts:latest
+        - name: moderation
+          image: tp-blog/moderation:latest
           imagePullPolicy: IfNotPresent
-          ports:
-            - containerPort: 4000
       restartPolicy: Always
       
