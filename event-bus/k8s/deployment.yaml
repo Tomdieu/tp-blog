@@ -17,7 +17,9 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: tp-block/event-bus:latest
+          image: ivantom/tp-blog-event-bus
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort : 4005
       restartPolicy: Always
       

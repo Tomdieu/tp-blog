@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: query
-          image: tp-blog/query
+          image: ivantom/tp-blog-query
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4001

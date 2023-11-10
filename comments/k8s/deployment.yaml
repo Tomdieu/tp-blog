@@ -17,7 +17,9 @@ spec:
     spec:
       containers:
         - name: comments
-          image: tp-block/comments:latest
+          image: ivantom/tp-blog-comments
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort : 4001
       restartPolicy: Always
       

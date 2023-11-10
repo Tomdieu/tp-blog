@@ -8,7 +8,7 @@ services:
       - "3000:3000"
     container_name: client
     restart: always
-    image: tp-blog/client:latest
+    image: ivantom/tp-blog-client
     networks:
       - blog
 

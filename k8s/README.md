@@ -36,7 +36,7 @@
 3. Run
 
     ```shell
-    kubectl apply -f dashboard.adminuser.yml
+    kubectl apply -f .
     ```
 
 4. Get a token

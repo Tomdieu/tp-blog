@@ -17,6 +17,9 @@ spec:
     spec:
       containers:
         - name: client
-          image: tp-blog/client:latest
+          image: ivantom/tp-blog-client
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort : 4005
       restartPolicy: Always
+      

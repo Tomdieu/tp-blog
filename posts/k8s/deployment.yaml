@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: posts
-          image: tp-blog/posts:latest
+          image: ivantom/tp-blog-posts
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 4000

@@ -17,7 +17,9 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: tp-blog/moderation:latest
+          image: ivantom/tp-blog-moderation
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort : 4003
       restartPolicy: Always
       
