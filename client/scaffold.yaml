@@ -1,0 +1,8 @@
+apiVersion: scaffold.dev/v1
+kind: Config
+build:
+  tagPolicy: gitCommit
+deploy:
+  k8s:
+    manifests:
+      - k8s/*
