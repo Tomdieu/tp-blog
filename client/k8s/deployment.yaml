@@ -20,6 +20,6 @@ spec:
           image: ivantom/tp-blog-client
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort : 4005
+            - containerPort : 3000
       restartPolicy: Always
       
