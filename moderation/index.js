@@ -12,7 +12,7 @@ app.post('/events', async (req, res) => {
     // if comment has mouf change status to rejected
     const status = data.content.includes('mouf') ? 'rejected' : 'approved';
 
-    await axios.post('http://localhost:4005/events', {
+    await axios.post('http://event-bus-service/events', {
       type: 'CommentModerated',
       data: {
         id: data.id,
