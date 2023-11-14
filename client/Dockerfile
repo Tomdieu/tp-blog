@@ -1,4 +1,4 @@
-FROM node:lts-slim
+FROM node:lts-slim AS builder
 LABEL authors="ivantom"
 
 WORKDIR /app
@@ -14,5 +14,5 @@ RUN npm run build
 FROM nginx
 WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
-COPY --from=first_build /app/build .
+COPY --from=builder /app/build .
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
