@@ -9,6 +9,10 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+RUN npm run build
 
-ENTRYPOINT ["npm", "start"]
+FROM nginx
+WORKDIR /usr/share/nginx/html
+RUN rm -rf ./*
+COPY --from=first_build /app/build .
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
