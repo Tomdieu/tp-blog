@@ -12,11 +12,11 @@ This is a micro service on a small blog forked from [atemengue (Régis Atemengue
 
 ### How to install
 
-- Docker
+- Docker [Install docker](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04)
 
-- Kubernetes
+- Kubernetes [Install k8s](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
-- Minikube
+- Minikube [Install Minikube](https://kubernetes.io/fr/docs/tasks/tools/install-minikube/)
 
 - Scaffold
 
