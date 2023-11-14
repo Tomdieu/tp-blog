@@ -11,7 +11,7 @@ spec:
       app: moderation
   template:
     metadata:
-      name: moderation-pod
+      name: moderation
       labels:
         app: moderation
     spec:

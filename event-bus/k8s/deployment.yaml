@@ -11,7 +11,7 @@ spec:
       app: event-bus
   template:
     metadata:
-      name: event-bus-pod
+      name: event-bus
       labels:
         app: event-bus
     spec:
