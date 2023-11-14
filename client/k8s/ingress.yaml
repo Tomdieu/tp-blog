@@ -4,11 +4,7 @@ metadata:
   name: client-ingress
 spec:
   rules:
-<<<<<<< HEAD
-    - host: posts.com  # host name
-=======
     - host: posts.com
->>>>>>> 766fbb8765b0f112f1e086f19ec043efcca25646
       http:
         paths:
         - path: /
