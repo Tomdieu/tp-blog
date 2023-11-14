@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: build-query-job
+spec:
+  template:
+    spec:
+      containers:
+        - name: tp-blog-query
+          image: ivantom/tp-blog-query
+          command: ["docker"]
+          args:
+            - "build"
+            - "-t"
+            - "ivantom/tp-blog-query:latest"
+            - "../"

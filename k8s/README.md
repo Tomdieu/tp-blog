@@ -10,15 +10,15 @@
 
 2. Create `yaml` file `admin-user.yaml` with this content
 
-    ```yml
+    ```yaml
     apiVersion: v1
     kind: ServiceAccount
     metadata:
       name: admin-user
       namespace: kubernetes-dashboard
-
+   
     ---
-
+   
     apiVersion: rbac.authorization.k8s.io/v1
     kind: ClusterRoleBinding
     metadata:
