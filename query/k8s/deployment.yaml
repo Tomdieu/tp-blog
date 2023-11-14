@@ -11,7 +11,7 @@ spec:
       app: query
   template:
     metadata:
-      name: query-pod
+      name: query
       labels:
         app: query
     spec:
