@@ -24,7 +24,13 @@ This is a micro service on a small blog forked from [atemengue (Régis Atemengue
     sudo install skaffold /usr/local/bin/
     ```
 
+## TO build the different images
 
+- Run
+
+    ```bash
+    ./build.sh
+    ```
 
 ## To run the deployment
 
