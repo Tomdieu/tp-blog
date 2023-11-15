@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta8
+kind: Config
+metadata:
+  name: query
+build:
+  artifacts:
+    - image: ivantom/tp-blog-query
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - k8s/deployment.yaml
+    - k8s/service.yaml
