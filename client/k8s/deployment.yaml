@@ -20,7 +20,7 @@ spec:
           image: ivantom/tp-blog-client
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort : 80
+            - containerPort : 3000
           resources:
             limits:
               memory: "128Mi"

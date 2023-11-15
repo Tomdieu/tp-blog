@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: client-ingress
 spec:
-  # ingressClassName: nginx
+  ingressClassName: nginx
   rules:
     - host: posts.com
       http:

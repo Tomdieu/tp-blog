@@ -5,6 +5,8 @@ services:
     build:
       context: .
     container_name: client
+    ports:
+      - "3000:3000"
     restart: always
     image: ivantom/tp-blog-client
     networks:

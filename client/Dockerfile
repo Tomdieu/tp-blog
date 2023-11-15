@@ -1,4 +1,4 @@
-FROM node:lts-slim AS builder
+FROM node:alpine
 LABEL authors="ivantom"
 
 WORKDIR /app
@@ -9,10 +9,17 @@ RUN npm install
 
 COPY . .
 
-RUN npm run build
+EXPOSE 3000
 
-FROM nginx
-WORKDIR /usr/share/nginx/html
-RUN rm -rf ./*
-COPY --from=builder /app/build .
-ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+ENTRYPOINT ["npm","start"]
+
+
+# RUN npm run build
+
+# EXPOSE 80
+
+# FROM nginx
+# WORKDIR /usr/share/nginx/html
+# RUN rm -rf ./*
+# COPY --from=builder /app/build .
+# ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
