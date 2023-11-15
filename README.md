@@ -17,7 +17,7 @@ This is a micro service on a small blog forked from [atemengue (Régis Atemengue
 
 - Minikube [Install Minikube](https://kubernetes.io/fr/docs/tasks/tools/install-minikube/)
 
-- Scaffold
+- Skaffold
 
     ```bash
     curl -Lo skaffold https://storage.googleapis.com/skaffold/releases/latest/skaffold-linux-amd64 && \
@@ -46,4 +46,12 @@ This is a micro service on a small blog forked from [atemengue (Régis Atemengue
 
     ```bash
     ./delete.sh
+    ```
+
+## To automate deployment with skaffold
+
+- Execute
+
+    ```bash
+    ./deploy_all.sh
     ```
