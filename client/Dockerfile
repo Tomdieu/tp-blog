@@ -10,7 +10,7 @@ RUN npm install -g npm@10.2.5
 
 COPY package*.json .
 
-RUN npm install --force
+RUN npm install
 
 COPY . .
 
