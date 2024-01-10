@@ -9,6 +9,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 4001
+EXPOSE 4002
 
 ENTRYPOINT ["npm", "start"]

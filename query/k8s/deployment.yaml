@@ -20,7 +20,7 @@ spec:
           image: ivantom/tp-blog-query
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 4001
+            - containerPort: 4002
           resources:
             limits:
               memory: "128Mi"

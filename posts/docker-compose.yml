@@ -1,11 +1,11 @@
 version: "3.8"
 
 services:
-  posts:
+  post-service:
     build:
       context: .
     ports:
-      - "4003:4003"
+      - "4000:4000"
     container_name: posts
     restart: always
     image: ivantom/tp-blog-posts

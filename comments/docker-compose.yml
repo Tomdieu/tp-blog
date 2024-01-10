@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  comments:
+  comments-service:
     build:
       context: .
     ports:
